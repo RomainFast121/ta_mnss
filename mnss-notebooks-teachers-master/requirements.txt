@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib==3.*
+gmsh
+itkwidgets
+pyvista
+git+https://gitlab.com/ganciaux/slides.git
+jupyter
+meshio
+nb-clean

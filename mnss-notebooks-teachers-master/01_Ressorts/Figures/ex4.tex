@@ -1,0 +1,23 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{calc,patterns,snakes}
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+    \begin{tikzpicture}[scale=0.4]
+      % Rod
+      \draw[thick] (0,0) rectangle (20,2);
+      \fill [pattern = north east lines] (-1,-1) rectangle (0,3);
+      \draw[thick] (0,3) -- (0,-1);
+      \fill [pattern = north east lines] (20,-1) rectangle (21,3);
+      \draw[thick] (20,-1) -- (20,3);
+      % Forces-Annotations
+      \draw[dashed,->] (-1.5,1) -- (25,1) node[above right] {$x$};
+      \draw[dashed,->] (0,3) -- (0,6) node[above] {$y$};
+      \draw[fill = black] (0,1) circle (.2);
+      \draw[fill = black] (10,1) circle (.2);
+      \draw[fill = black] (20,1) circle (.2);
+      \draw[very thick,->] (10,1) -- (12,1) node[right] {$F$};
+      \draw[|<->|] (0,-2) -- (10,-2) node[below,pos=0.5] {$L/2$};
+      \draw[|<->|] (10,-2) -- (20,-2) node[below,pos=0.5] {$L/2$};
+      \node [right,align=left] at (22,5) {$E=1$ MPa \\ $A=1$ mm$^2$\\ $F=2$ N \\ $L=2$ mm};
+    \end{tikzpicture}
+\end{document}

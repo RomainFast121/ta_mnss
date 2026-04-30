@@ -1,0 +1,11 @@
+.DS_Store
+Formulaire*heures*.xlsx
+*decompte*heure*
+*décompte*heure*
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+**/venv/
+**/.venv/

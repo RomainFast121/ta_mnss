@@ -1,0 +1,16 @@
+
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,patterns,snakes}
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+          \begin{axis}[xlabel=x (mm), ylabel=$\sigma$ (MPa),
+              xmin=0,ymin=-2,xmax=2,ymax=2]
+            \addplot [thick,dashed,color=black, mark=none] coordinates { (0,1) (1,1) (1,-1) (2,-1) };
+            \addlegendentry{Approximation};
+            \addplot[thick,color=red, mark=none] coordinates { (0,1) (1,1) (1,-1) (2,-1) };
+            \addlegendentry{Exact};
+          \end{axis}
+        \end{tikzpicture}
+\end{document}

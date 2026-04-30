@@ -1,0 +1,12 @@
+[submodule "pieges-fe/arthur"]
+	path = pieges-fe/arthur
+	url = https://github.com/ArthurCornet/plate-notch-FEM
+[submodule "pieges-fe/parissa"]
+	path = pieges-fe/parissa
+	url = ssh://git@gitlab.epfl.ch/alavi/fem-drawbackes.git
+[submodule "mnss-notebooks"]
+	path = mnss-notebooks
+	url = git@gitlab.epfl.ch:anciaux/mnss-notebooks.git
+[submodule "publish"]
+	path = publish
+	url = git@gitlab.epfl.ch:anciaux/mnss-notebooks.git

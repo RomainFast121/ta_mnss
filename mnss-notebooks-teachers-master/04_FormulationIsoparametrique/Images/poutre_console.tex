@@ -1,0 +1,15 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{calc,patterns,snakes}
+% \usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\begin{document}
+  \begin{tikzpicture}[scale=2]
+    \draw (0, 0) rectangle (5, 1);
+    \draw[|<->|] (0, -0.5) -- (5, -0.5) node [midway, below] {$500$ mm};
+    \draw[|<->|] (5.5, 0) -- (5.5, 1) node [midway, right] {$100$ mm};
+    \draw[->, very thick] (5, 2) node[above]{$P = 100$ N} -- (5, 1);
+    \draw(0, -0.3) -- (0, 1.3);
+    \foreach \x in {-0.3, -0.1, ..., 1.3} {
+      \draw (0, \x) -- (-0.2, \x - 0.2);
+    }
+  \end{tikzpicture}
+\end{document}
